@@ -11,7 +11,7 @@ function Header() {
         {/* 로고 클릭 시 메인 페이지로 이동 */}
         <div className="logo-area">
           <Link to="/">
-            <img src="logo.png" alt="CareerBuddy 로고" className="logo-img" />
+            <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="CareerBuddy 로고" className="logo-img" />
           </Link>
         </div>
 
