@@ -1,0 +1,251 @@
+/* Headhunting 페이지 전용 스타일 */
+.headhunt-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.headhunt-container h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+/* 필터 섹션 */
+.filter-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #fafafa;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.filter-group {
+  margin-bottom: 20px;
+}
+
+.filter-group:last-child {
+  margin-bottom: 0;
+}
+
+.filter-group label {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #374151;
+  display: block;
+  font-weight: 600;
+}
+
+/* Grid button layout */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.grid .separator {
+  width: 100%;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  pointer-events: none;
+}
+
+.grid .filter-btn {
+  border: 1px solid #ccc;
+  background: #f9fafb;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #374151;
+  transition: all 0.2s;
+  white-space: nowrap;
+  height: auto;
+  min-height: 36px;
+}
+
+.grid .filter-btn:hover:not(:disabled) {
+  background: #f3f4f6;
+  border-color: #bbb;
+}
+
+.grid .filter-btn.selected {
+  background: #7c3aed;
+  color: #fff;
+  border-color: #7c3aed;
+}
+
+.grid .filter-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #f3f4f6;
+}
+
+/* 검색어 입력 */
+.filter-group input[type="text"] {
+  padding: 10px 12px;
+  width: 70%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+.filter-group input[type="text"]:focus {
+  outline: none;
+  border-color: #7c3aed;
+}
+
+.search-btn {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.search-btn:hover {
+  background: #1a1a1a;
+}
+
+/* 선택 조건 */
+.selected {
+  margin-top: 20px;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.selected label {
+  font-weight: 600;
+  color: #374151;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.selected p {
+  margin: 0;
+  color: #6b7280;
+}
+
+/* 채용 공고 리스트 */
+.job-list {
+  margin-top: 30px;
+}
+
+.job-list h3 {
+  margin-bottom: 20px;
+  color: #374151;
+}
+
+.job-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 12px;
+  background: white;
+  transition: all 0.2s;
+}
+
+.job-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-color: #d1d5db;
+}
+
+.job-info {
+  flex: 1;
+}
+
+.job-info h4 {
+  font-size: 1.1rem;
+  margin: 0 0 8px 0;
+  color: #1a1a1a;
+}
+
+.job-info p {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+.apply-btn {
+  background: #38bdf8;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.apply-btn:hover {
+  background: #0ea5e9;
+}
+
+/* 페이지네이션 */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 8px;
+}
+
+.pagination button {
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  min-width: 40px;
+  transition: all 0.2s;
+}
+
+.pagination button:hover {
+  background: #f3f4f6;
+  border-color: #d1d5db;
+}
+
+.pagination button.active {
+  background: #7c3aed;
+  color: white;
+  border-color: #7c3aed;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .headhunt-container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .job-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .apply-btn {
+    width: 100%;
+  }
+}

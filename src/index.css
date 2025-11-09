@@ -1,13 +1,119 @@
-body {
+/* 전역 스타일 - 모든 페이지 공통 */
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+}
+
+body {
+  font-family: "Pretendard", "Noto Sans KR", -apple-system, BlinkMacSystemFont, 
+    'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 
+    'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f8fafc;
+  color: #334155;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 헤더 공통 스타일 */
+.header-main {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.nav-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+}
+
+.logo-area a {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 8rem;
+  height: 8rem;
+  object-fit: cover;
+}
+
+.menu-category-group {
+  display: none;
+  align-items: center;
+  gap: 8rem;
+}
+
+@media (min-width: 768px) {
+  .menu-category-group {
+    display: flex;
+  }
+}
+
+.menu-item {
+  color: #475569;
+  font-weight: 700;
+  font-size: 1.125rem;
+  transition: color 0.15s;
+}
+
+.hover-purple:hover {
+  color: #9333EA;
+}
+
+.auth-group {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.btn {
+  font-weight: 700;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.15s;
+  font-size: 0.875rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: #9333EA;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #7e22ce;
+}
+
+.btn-secondary {
+  background-color: white;
+  border: 1px solid #9333EA;
+  color: #9333EA;
+}
+
+.btn-secondary:hover {
+  background-color: #f5f3ff;
 }

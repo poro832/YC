@@ -1,24 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import Header from "./Header";
+import MiniProfile from "./MiniProfile";
+import MentorTab from "./components/MentorTab";
+import LoginForm from "./LoginForm";
+import Mentoring from "./Mentoring";
+import MentoringChat from "./MentoringChat";
+import Headhunting from "./Headhunting";
+import AIInterview from "./AIInterview";
+
+function AppContent() {
+  const location = useLocation();
+  const isLoginPage = location.pathname === "/login";
+
+  return (
+    <div className="bg-body text-main">
+      {/* 로그인 페이지가 아닐 때만 헤더 표시 */}
+      {!isLoginPage && <Header />}
+      
+      <main>
+        <Routes>
+          <Route path="/" element={<MiniProfile />} />
+          <Route path="/ai-interview" element={<AIInterview />} />
+          <Route path="/mentoring" element={<Mentoring />} />
+          <Route path="/mentoring-chat" element={<MentoringChat />} />
+          <Route path="/headhunting" element={<Headhunting />} />
+          <Route path="/login" element={<LoginForm />} />
+        </Routes>
+      </main>
+      
+      {!isLoginPage && <footer>{/* 푸터 영역 */}</footer>}
+    </div>
+  );
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <AppContent />
+    </Router>
   );
 }
 
