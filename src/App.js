@@ -16,7 +16,7 @@ function MainPage() {
       {/* 여기에 메인 페이지 콘텐츠 추가 가능 */}
       <div style={{ padding: '2rem', maxWidth: '800px' }}>
         <h1 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '1rem', color: '#334155' }}>
-          CareerBuddy에 오신 것을 환영합니다
+          YourConnect에 오신 것을 환영합니다
         </h1>
         <p style={{ fontSize: '1.125rem', color: '#64748b', lineHeight: '1.75' }}>
           AI 기반 커리어 개발 플랫폼으로 당신의 성공적인 커리어를 설계하세요.
