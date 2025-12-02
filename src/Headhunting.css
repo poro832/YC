@@ -80,6 +80,124 @@ body {
 .btn-primary { border: 1px solid #8b5cf6; background: #fff; color: #8b5cf6; }
 .btn-primary:hover { background: #8b5cf6; color: #fff; }
 .btn-secondary { border: 1px solid #aaa; background: #fff; color: #222; }
+
+/* 프로필 박스 - 홈페이지 스타일 */
+.headhunt-profile-box {
+  width: 100%;
+  max-width: 240px;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.headhunt-profile-box.logged {
+  padding: 12px;
+}
+
+/* 로그아웃 상태 프로필 */
+.headhunt-profile-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.headhunt-profile-box.logged .headhunt-profile-content {
+  justify-content: flex-start;
+  margin-bottom: 0;
+  cursor: default;
+}
+
+.headhunt-profile-content:hover .headhunt-profile-text {
+  color: #9333EA;
+}
+
+.headhunt-user-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.headhunt-profile-text {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  pointer-events: none;
+  margin: 0;
+}
+
+.headhunt-profile-footer {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.headhunt-footer-link {
+  font-size: 0.875rem;
+  color: #6b7280;
+  text-decoration: none;
+}
+
+.headhunt-footer-link:hover {
+  color: #9333EA;
+}
+
+.headhunt-divider {
+  width: 1px;
+  background-color: #d1d5db;
+  height: 16px;
+}
+
+/* 로그인 상태 프로필 */
+.headhunt-profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.headhunt-profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+}
+
+.headhunt-profile-name {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: normal;
+  color: #1a1a1a;
+  text-align: left;
+}
+
+.headhunt-profile-edit {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 0.85rem;
+  color: #666;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0;
+  background-color: transparent;
+}
+
+.headhunt-profile-edit:hover {
+  color: #333;
+}
+
+/* 기존 profile-box 스타일 유지 (하위 호환성) */
 .profile-box {
     display: flex;
     align-items: center;
