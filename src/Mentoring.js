@@ -38,12 +38,12 @@ function Mentoring() {
   }, []);
 
   const mentors = [
-    { name: "이서준", field: "IT / 백엔드 개발자", rating: 4.9, ratingCount: 128 },
-    { name: "박현수", field: "금융 / 전략 기획", rating: 4.7, ratingCount: 96 },
-    { name: "배현진", field: "경영 컨설턴트 / PM", rating: 4.8, ratingCount: 142 },
-    { name: "서유진", field: "인사 / 커리어 코치", rating: 4.6, ratingCount: 75 },
-    { name: "최가은", field: "데이터 분석가 / PM", rating: 4.8, ratingCount: 101 },
-    { name: "정재윤", field: "AI 개발자 / 연구원", rating: 4.9, ratingCount: 187 }
+    { name: "이서준", field: "IT / 백엔드 개발자", rating: 4.78, ratingCount: 40, image: "https://randomuser.me/api/portraits/men/1.jpg" },
+    { name: "박현우", field: "금융 / 전략 기획", rating: 4.8, ratingCount: 52, image: "https://randomuser.me/api/portraits/men/2.jpg" },
+    { name: "배한결", field: "경영 컨설턴트 / 재무", rating: 4.68, ratingCount: 48, image: "https://randomuser.me/api/portraits/men/3.jpg" },
+    { name: "정재윤", field: "AI 개발자 / 연구원", rating: 4.72, ratingCount: 35, image: "https://randomuser.me/api/portraits/men/4.jpg" },
+    { name: "서유진", field: "인사(HR) / 전문 커리어 코치", rating: 4.82, ratingCount: 61, image: "https://randomuser.me/api/portraits/women/1.jpg" },
+    { name: "최가은", field: "데이터 분석가 / PM", rating: 4.67, ratingCount: 54, image: "https://randomuser.me/api/portraits/women/2.jpg" }
   ];
 
   const handleApply = (mentorName) => {
@@ -68,8 +68,8 @@ function Mentoring() {
             <div key={index} className="mentor-card">
               <div className="mentor-left">
                 <img 
-                  src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" 
-                  alt="멘토 프로필"
+                  src={mentor.image} 
+                  alt={`${mentor.name} 멘토 프로필`}
                 />
                 <div className="rating-row" aria-label={`평점 ${mentor.rating.toFixed(1)}점, 총 ${mentor.ratingCount}명 평가`}>
                   <span className="rating-label">평점</span>

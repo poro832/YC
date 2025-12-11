@@ -16,7 +16,7 @@ function Profile() {
     marketing: '동의'
   });
 
-  const API_BASE_URL = 'http://192.168.225.44:8000';
+  const API_BASE_URL = 'http://192.168.226.95:8000';
 
   useEffect(() => {
     loadAndDisplaySpecs();

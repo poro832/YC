@@ -83,13 +83,14 @@ body {
 
 /* 프로필 박스 - 홈페이지 스타일 */
 .headhunt-profile-box {
-  width: 100%;
-  max-width: 240px;
+  width: 120%;
+  max-width: 360px;
+  margin-left: -20px;
   background-color: white;
   border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  padding: 16px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 12px;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -101,6 +102,7 @@ body {
 /* 로그아웃 상태 프로필 */
 .headhunt-profile-content {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   margin-bottom: 16px;
@@ -119,18 +121,19 @@ body {
 }
 
 .headhunt-user-icon {
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   pointer-events: none;
 }
 
 .headhunt-profile-text {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #1a1a1a;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #6b7280;
   pointer-events: none;
   margin: 0;
+  white-space: nowrap;
 }
 
 .headhunt-profile-footer {

@@ -33,7 +33,7 @@ function Home() {
       name: "평점", 
       rating: 4.78, 
       ratingCount: 40,
-      title: "멘토 이름 : 이서준",
+      title: "멘토명 : 이서준",
       field: "전문 분야 : IT/백엔드 개발자",
       image: "https://randomuser.me/api/portraits/men/1.jpg"
     },
@@ -92,7 +92,7 @@ function Home() {
       company: "안마영",
       badge: "다양한그룹 외주 기업 개발자 모집 인원",
       title: "[대전/2개월/유성] 대기업 솔루션 연계 프로젝트 개발자 고급 모집",
-      deadline: "9/23(월) - 10/30(월)",
+      deadline: "11/23(월) - 12/30(월)",
       tags: ["서류전형", "면접전형", "시험면접", "인적성검사"],
       detail: "임금/복지/4대보험 경력 10년 이상 - 학력무관 - 서울 > 송파구"
     }
@@ -142,7 +142,7 @@ function Home() {
                 className="more-btn"
                 onClick={() => navigate('/mentoring')}
               >
-                조건 별로 보기
+                상세 보기
               </button>
             </div>
             
